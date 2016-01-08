@@ -1,3 +1,5 @@
+import time
+
 while 1 == 1:
 	tfile = open("/sys/bus/w1/devices/28-0000075c293f/w1_slave") 
 	text = tfile.read() 
@@ -7,4 +9,4 @@ while 1 == 1:
 	temperature = float(temperaturedata[2:]) 
 	temperature = temperature / 1000 
 	print temperature
-	sleep(1)
+	time.sleep(1)
