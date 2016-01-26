@@ -1,0 +1,7 @@
+if (exists("/usr/bin/java")) {
+    java = "/usr/bin/java";
+    call(java, "Test.class");
+} else {
+    println("Java doesn't exist!");
+    bash("exit 1");
+}
