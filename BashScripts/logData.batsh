@@ -4,7 +4,7 @@ data = bash("$($unparsed | tail -n 1 | tail -c 6)");
 
 if (test == "YES") {
     println("Data received.");
-    
+    println(data);
 } else {
     println("Read failure");
 }
