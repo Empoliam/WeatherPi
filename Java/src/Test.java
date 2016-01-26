@@ -11,12 +11,12 @@ public class Test
 		
 		try {
 			BufferedReader br = new BufferedReader(new FileReader("/sys/bus/w1/devices/28-0000075c293f/w1_slave"));
-			System.out.println(br.readLine());
+			br.readLine();
+			System.out.println(br.readLine().split(" ")[9]);
 			br.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
