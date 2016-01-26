@@ -1,7 +1,7 @@
-unparsed=$(cat /sys/bus/w1/devices/28-0000075c293f/w1_slave)
-testdata=$($unparsed | head -n 1 | tail -c 4)
+unparsed="cat /sys/bus/w1/devices/28-0000075c293f/w1_slave"
+test2=$($unparsed | head -n 1 | tail -c 4)
 data=$($unparsed | tail -n 1 | tail -c 6)
-if [ "$test" == "YES" ]; then
+if [ "$test2" == "YES" ]; then
   "echo" "-e" "Data received."
   "echo" "-e" "$data"
 else
